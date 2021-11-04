@@ -3,6 +3,7 @@
 // - Prendendo come riferimento il layout di esempio presente nell’html, stampiamo tutte le card del nostro team.
 // - Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
 
+
 // 1. Creiamo array di oggetti con i membri del team
 
     const members = [
@@ -68,5 +69,16 @@ for (let i = 0; i < members.length; i++) {
         </div>
     </div>`;
 }
+
+// 3. Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
+
+const inputName = document.getElementById('name');
+const inputRole = document.getElementById('role');
+const inputImage = document.getElementById('image');
+const addMemberBtn = document.getElementById('addMemberButton');
+
+
+
+
 
 
