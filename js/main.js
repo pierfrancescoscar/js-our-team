@@ -72,10 +72,48 @@ for (let i = 0; i < members.length; i++) {
 
 // 3. Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
 
-const inputName = document.getElementById('name');
-const inputRole = document.getElementById('role');
-const inputImage = document.getElementById('image');
-const addMemberBtn = document.getElementById('addMemberButton');
+// Al click del bottone "add" devi inserire i dati inseriti dall'utente nel tuo array
+
+const addBtn = document.getElementById('addMemberButton');
+
+addBtn.addEventListener('click', function() {
+    cardContainer.innerHTML = '';
+
+    const newName = document.getElementById('name').value;
+    const newRole = document.getElementById('role').value;
+    const newPhoto = document.getElementById('image').value;
+
+    const newMember = {
+        completeName: newName,
+        role: newRole,
+        photo: newPhoto,
+    };
+
+    members.push(newMember);
+    console.log(members);
+
+    // New loop for new members
+
+    for (let i = 0; i < members.length; i++) {
+
+        const cardItem = members[i];
+    
+        cardContainer.innerHTML +=
+        `<div class="team-card">
+            <div class="card-image">
+            <img
+                src="${cardItem.photo}"
+                alt="${cardItem.completeName}"
+            />
+            </div>
+            <div class="card-text">
+            <h3>${cardItem.completeName}</h3>
+            <p>${cardItem.role}</p>
+            </div>
+        </div>`;
+    }
+
+})
 
 
 
