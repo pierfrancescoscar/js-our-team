@@ -92,7 +92,7 @@ addBtn.addEventListener('click', function() {
     members.push(newMember);
     console.log(members);
 
-    // New loop for new members
+    // Nuovo loop per nuovi utenti
 
     for (let i = 0; i < members.length; i++) {
 
