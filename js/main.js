@@ -9,39 +9,64 @@
     {
         completeName: 'Wayne Barnett',
         role: 'Founder & CEO',
-        photo: '',
+        photo: 'img/wayne-barnett-founder-ceo.jpg',
 
     },
     {
         completeName: 'Angela Caroll',
         role: 'Chief Editor',
-        photo: '',
+        photo: 'img/angela-caroll-chief-editor.jpg',
 
     },
     {
         completeName: 'Walter Gordon',
         role: 'Office Manager',
-        photo: '',
+        photo: 'img/walter-gordon-office-manager.jpg',
 
     },
     {
         completeName: 'Angela Lopez',
         role: 'Social Media Manager',
-        photo: '',
+        photo: 'img/angela-lopez-social-media-manager.jpg',
 
     },
     {
         completeName: 'Scott Estrada',
         role: 'Developer',
-        photo: '',
+        photo: 'img/scott-estrada-developer.jpg',
 
     },
     {
         completeName: 'Barbara Ramos',
         role: 'Graphic Designer',
-        photo: '',
+        photo: 'img/barbara-ramos-graphic-designer.jpg',
 
     },
     ];
 
     console.log(members);
+
+// 2. Stampiamo tutte le card presenti nel nostro team
+
+const cardContainer = document.querySelector('.team-container');
+
+for (let i = 0; i < members.length; i++) {
+
+    const cardItem = members[i];
+
+    cardContainer.innerHTML +=
+    `<div class="team-card">
+        <div class="card-image">
+        <img
+            src="${cardItem.photo}"
+            alt="${cardItem.completeName}"
+        />
+        </div>
+        <div class="card-text">
+        <h3>${cardItem.completeName}</h3>
+        <p>${cardItem.role}</p>
+        </div>
+    </div>`;
+}
+
+
